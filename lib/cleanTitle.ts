@@ -4,3 +4,8 @@ export function cleanTitle(raw: string): string {
   t = t.replace(/\s+/g, " ");
   return t.trim();
 }
+
+export function ebaySoldLink(title: string): string {
+  const q = encodeURIComponent(title);
+  return `https://www.ebay.com/sch/i.html?_nkw=${q}&LH_Sold=1&LH_Complete=1`;
+}
